@@ -1,7 +1,7 @@
-const power = () => {
+const Power = () => {
   return (
     <div>power</div>
   )
 }
 
-export default power
+export default Power

@@ -1,11 +1,9 @@
-import Navbar from "../components/navbar"
+import Sidebar from "../Components/Sidebar"
 
-const overview = () => {
+const Overview = () => {
   return (
-    <div>
-      <Navbar />
-    </div>
+    <Sidebar />
   )
 }
 
-export default overview
+export default Overview
