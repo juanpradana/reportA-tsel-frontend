@@ -1,8 +1,12 @@
 import Sidebar from "../Components/Sidebar"
+import Navbar from "../Components/Navbar"
 
 const Power = () => {
   return (
-    <Sidebar />
+    <>
+      <Navbar />
+      <Sidebar />
+    </>
   )
 }
 

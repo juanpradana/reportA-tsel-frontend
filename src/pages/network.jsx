@@ -1,8 +1,12 @@
 import Sidebar from "../Components/Sidebar"
+import Navbar from "../Components/Navbar"
 
 const Network = () => {
   return (
-    <Sidebar />
+    <>
+      <Navbar />
+      <Sidebar />
+    </>
   )
 }
 
