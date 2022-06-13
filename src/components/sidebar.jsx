@@ -3,10 +3,10 @@ import { useState } from "react";
 function Sidebar() {
   const [open, setOpen] = useState(true);
   const Menus = [
-    { title: "Overview", src: "Pulse" },
-    { title: "Network", src: "Hotspot" },
-    { title: "Power", src: "Lightning-alt"},
-    { title: "Transport ", src: "Globe" },
+    { title: "Overview", src: "Pulse", dest: "/" },
+    { title: "Network", src: "Hotspot", dest: "/network" },
+    { title: "Power", src: "Lightning-alt", dest: "/power"},
+    { title: "Transport ", src: "Globe", dest: "/transport" },
   ];
 
   return (
@@ -41,21 +41,26 @@ function Sidebar() {
           {Menus.map((Menu, index) => (
             <li
               key={index}
-              className={`flex  rounded-md p-2 cursor-pointer hover:bg-purple-500/50 text-black font-bold text-sm items-center gap-x-4 
-              ${Menu.gap ? "mt-9" : "mt-2"} ${
-                index === 0 && "bg-purple-500/50"
-              } `}
             >
-              <img src={require(`../assets/${Menu.src}.png`)} alt='menus'/>
-              <span className={`${!open && "hidden"} origin-left duration-200`}>
-                {Menu.title}
-              </span>
+              <a 
+                href={`${Menu.dest}`}
+                className={
+                  `flex  rounded-md p-2 cursor-pointer hover:bg-purple-500/50 text-black font-bold text-sm items-center gap-x-4 
+                  ${Menu.gap ? "mt-9" : "mt-2"}
+                  ${index === Menus.map(object => object.dest).indexOf(`${window.location.pathname}`) && "bg-purple-500/50"}`
+                }
+              >
+                <img src={require(`../assets/${Menu.src}.png`)} alt='menus'/>
+                <span className={`${!open && "hidden"} origin-left duration-200`}>
+                  {Menu.title}
+                </span>
+              </a>
             </li>
           ))}
         </ul>
       </div>
       <div className="h-screen flex-1 p-7">
-        <h1 className="text-2xl font-semibold ">Overview Page</h1>
+        <h1 className="text-2xl font-semibold ">{window.location.pathname} Page</h1>
       </div>
     </div>
   );

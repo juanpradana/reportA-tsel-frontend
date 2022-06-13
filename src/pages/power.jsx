@@ -1,6 +1,8 @@
+import Sidebar from "../Components/Sidebar"
+
 const Power = () => {
   return (
-    <div>power</div>
+    <Sidebar />
   )
 }
 

@@ -1,6 +1,8 @@
+import Sidebar from "../Components/Sidebar"
+
 const Transport = () => {
   return (
-    <div>transport</div>
+    <Sidebar />
   )
 }
 

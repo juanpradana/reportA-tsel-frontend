@@ -1,6 +1,8 @@
+import Sidebar from "../Components/Sidebar"
+
 const Network = () => {
   return (
-    <div>network</div>
+    <Sidebar />
   )
 }
 
