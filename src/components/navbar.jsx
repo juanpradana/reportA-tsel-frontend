@@ -8,7 +8,7 @@ function classNames(...classes) {
 
 function Navbar() {
   return (
-    <div className='w-full h-20 flex justify-end items-center px-8 text-white bg-black'>
+    <div className='w-full h-12 flex justify-end items-center px-8 text-white bg-black'>
       <ul className='flex items-center'>
         <li className='p-4'>
           <Menu as='div' className='relative inline-block text-left'>

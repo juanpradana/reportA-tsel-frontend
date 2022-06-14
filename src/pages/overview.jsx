@@ -4,8 +4,10 @@ import Navbar from "../Components/Navbar"
 const Overview = () => {
   return (
     <>
-      <Navbar />
-      <Sidebar />
+      <div className="flex">
+        <Sidebar />
+        <Navbar />
+      </div>
     </>
   )
 }
