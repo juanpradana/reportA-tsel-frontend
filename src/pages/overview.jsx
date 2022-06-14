@@ -6,7 +6,10 @@ const Overview = () => {
     <>
       <div className="flex">
         <Sidebar />
-        <Navbar />
+        <div className="w-full">
+          <Navbar />
+          <div className="text-center text-lg">{window.location.pathname} Page Under Maintenance!</div>
+        </div>
       </div>
     </>
   )

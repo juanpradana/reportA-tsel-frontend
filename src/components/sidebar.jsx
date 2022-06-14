@@ -59,9 +59,6 @@ function Sidebar() {
           ))}
         </ul>
       </div>
-      {/* <div className="h-screen flex-1 p-7">
-        <h1 className="text-2xl font-semibold ">{window.location.pathname} Page</h1>
-      </div> */}
     </div>
   );
 }
