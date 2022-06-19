@@ -1,5 +1,6 @@
 import Sidebar from "../Components/Sidebar"
 import Navbar from "../Components/Navbar"
+import Content from "../Components/Content"
 
 const Overview = () => {
   return (
@@ -8,7 +9,7 @@ const Overview = () => {
         <Sidebar />
         <div className="w-full">
           <Navbar />
-          <div className="text-center text-lg">{window.location.pathname} Page Under Maintenance!</div>
+          <Content />
         </div>
       </div>
     </>
