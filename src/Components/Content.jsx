@@ -1,9 +1,9 @@
-import React from 'react'
+import Table from './Table'
 
 const Content = () => {
   return (
-    <div className="flex m-4">
-      <p>browwww</p>
+    <div className='flex m-2'>
+      <Table />
     </div>
   )
 }
