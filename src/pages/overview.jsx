@@ -1,6 +1,6 @@
 import Sidebar from "../Components/Sidebar"
 import Navbar from "../Components/Navbar"
-import Content from "../Components/Content"
+import Table from "../Components/Table"
 
 const Overview = () => {
   return (
@@ -9,7 +9,9 @@ const Overview = () => {
         <Sidebar />
         <div className="w-full">
           <Navbar />
-          <Content />
+          <div className='flex m-2'>
+            <Table />
+          </div>
         </div>
       </div>
     </>
