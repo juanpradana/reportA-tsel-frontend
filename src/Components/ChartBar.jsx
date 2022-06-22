@@ -7,30 +7,27 @@ const ChartBar = () => {
       type: "bar",
       data: {
         labels: [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
+          "2G",
+          "3G",
+          "4G",
+          "5G",
         ],
         datasets: [
           {
-            label: new Date().getFullYear(),
-            backgroundColor: "#ed64a6",
-            borderColor: "#ed64a6",
-            data: [30, 78, 56, 34, 100, 45, 13],
+            label: "tampan",
+            backgroundColor: `#${Math.floor(Math.random()*16777215).toString(16)}`,
+            borderColor: `#${Math.floor(Math.random()*16777215).toString(16)}`,
+            data: [30, 78, 56, 4],
             fill: false,
-            barThickness: 8,
+            barThickness: 10,
           },
           {
-            label: new Date().getFullYear() - 1,
+            label: "siak",
+            backgroundColor: `#${Math.floor(Math.random()*16777215).toString(16)}`,
+            borderColor: `#${Math.floor(Math.random()*16777215).toString(16)}`,
+            data: [27, 68, 86, 7],
             fill: false,
-            backgroundColor: "#3182ce",
-            borderColor: "#3182ce",
-            data: [27, 68, 86, 74, 10, 4, 87],
-            barThickness: 8,
+            barThickness: 10,
           },
         ],
       },
@@ -101,7 +98,7 @@ const ChartBar = () => {
 
   return (
     <>
-      <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
+      <div className="relative flex flex-col min-w-0 break-words bg-white h-[40vh] w-full sm:w-[50vw] shadow-lg rounded">
         <div className="rounded-t mb-0 px-4 py-3 bg-transparent">
           <div className="flex flex-wrap items-center">
             <div className="relative w-full max-w-full flex-grow flex-1">
@@ -113,7 +110,7 @@ const ChartBar = () => {
         </div>
         <div className="p-4 flex-auto">
           {/* Chart */}
-          <div className="relative h-350-px">
+          <div className="relative h-48">
             <canvas id="bar-chart"></canvas>
           </div>
         </div>

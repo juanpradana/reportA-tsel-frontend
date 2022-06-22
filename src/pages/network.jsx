@@ -1,6 +1,6 @@
 import Sidebar from "../Components/Sidebar"
 import Navbar from "../Components/Navbar"
-import ChartBar from "../Components/ChartBar"
+import Table from "../Components/Table"
 
 const Network = () => {
   return (
@@ -9,8 +9,8 @@ const Network = () => {
         <Sidebar />
         <div className="w-full">
           <Navbar />
-          <div className='flex m-2'>
-            <ChartBar />
+          <div className='m-4'>
+            <Table />
           </div>
         </div>
       </div>

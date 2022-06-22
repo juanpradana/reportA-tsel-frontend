@@ -1,5 +1,6 @@
 import Sidebar from "../Components/Sidebar"
 import Navbar from "../Components/Navbar"
+import ChartBar from "../Components/ChartBar"
 
 const Power = () => {
   return (
@@ -8,7 +9,9 @@ const Power = () => {
         <Sidebar />
         <div className="w-full">
           <Navbar />
-          <div className="text-center text-lg">{window.location.pathname} Page Under Maintenance!</div>
+          <div className='flex m-2'>
+            <ChartBar />
+          </div>
         </div>
       </div>
     </>
