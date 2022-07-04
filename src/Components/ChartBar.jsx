@@ -1,34 +1,63 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Chart from "chart.js";
 
 const ChartBar = () => {
-  React.useEffect(() => {
+  const [datas, setDatas] = useState([])
+
+  const getDatas = async () => {
+    try {
+      let response = await axios.get('http://localhost:4000/gRtvd563/datas')
+      setDatas(response.data)
+    } catch(e) {
+      console.log(e.message)
+    }
+  }
+
+  useEffect(() => {
+    getDatas()
+  }, [])
+
+  useEffect(() => {
     let config = {
       type: "bar",
       data: {
+        // labels: [
+        //   "2G",
+        //   "3G",
+        //   "4G",
+        //   "5G",
+        // ],
+        // datasets: [
+        //   {
+        //     label: "tampan",
+        //     backgroundColor: `#${Math.floor(Math.random()*16777215).toString(16)}`,
+        //     borderColor: `#${Math.floor(Math.random()*16777215).toString(16)}`,
+        //     data: [30, 78, 56, 4],
+        //     fill: false,
+        //     barThickness: 10,
+        //   },
+        //   {
+        //     label: "siak",
+        //     backgroundColor: `#${Math.floor(Math.random()*16777215).toString(16)}`,
+        //     borderColor: `#${Math.floor(Math.random()*16777215).toString(16)}`,
+        //     data: [27, 68, 86, 7],
+        //     fill: false,
+        //     barThickness: 10,
+        //   },
+        // ],
         labels: [
-          "2G",
-          "3G",
-          "4G",
-          "5G",
+          "2022",
         ],
         datasets: [
           {
-            label: "tampan",
+            label: "branch",
             backgroundColor: `#${Math.floor(Math.random()*16777215).toString(16)}`,
             borderColor: `#${Math.floor(Math.random()*16777215).toString(16)}`,
-            data: [30, 78, 56, 4],
+            data: [ 50 ],
             fill: false,
             barThickness: 10,
-          },
-          {
-            label: "siak",
-            backgroundColor: `#${Math.floor(Math.random()*16777215).toString(16)}`,
-            borderColor: `#${Math.floor(Math.random()*16777215).toString(16)}`,
-            data: [27, 68, 86, 7],
-            fill: false,
-            barThickness: 10,
-          },
+          }
         ],
       },
       options: {
