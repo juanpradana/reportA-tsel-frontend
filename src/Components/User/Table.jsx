@@ -2,33 +2,12 @@
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-
-
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
 const Table = () => {
-  const [datas, setDatas] = useState([])
-  const [dataHeader, setDataHeader] = useState([])
-
-  const getDatas = async () => {
-    try {
-      let response = await axios.get('http://localhost:4000/gRtvd563/datas')
-      setDatas(response.data)
-      setDataHeader(Object.keys(response.data[1]))
-    } catch(e) {
-      console.log(e.message)
-    }
-  }
-
-  useEffect(() => {
-    getDatas()
-  }, [])
-
   return(
     <div className="p-2 sm:p-4 box-content max-w-full rounded-md border border-gray-500">
       <h1 className="text-lg sm:text-2xl">Data Table</h1>
@@ -88,54 +67,6 @@ const Table = () => {
           </Menu.Items>
         </Transition>
       </Menu>
-
-      {/* <div className="m-1 sm:m-5 flex flex-col h-[30vh]">
-        <div className="grow overflow-scroll">
-          <table className="relative w-full">
-            <thead>
-              <tr>
-                {
-                  dataHeader.map((datha, index) => {
-                    if (index === 0) {
-                      return(
-                        <th key={index} className="sticky left-0 top-0 z-[3] text-xs px-1 py-0.5 sm:px-6 sm:py-3 text-red-900 bg-red-300">{datha}</th>
-                      )
-                    } else {
-                      return(
-                        <th key={index} className="sticky top-0 z-[2] text-xs px-1 py-0.5 sm:px-6 sm:py-3 text-red-900 bg-red-300">{datha}</th>  
-                      )
-                    }
-                  })
-                }
-              </tr>
-            </thead>
-
-            <tbody className="bg-red-100">
-              {
-                datas.map((dathas, indexs) => {
-                  return (
-                    <tr key={indexs}>
-                      {
-                        Object.values(dathas).map((datha, index) => {
-                          if (index === 0) {
-                            return(
-                              <td key={index} className="sticky left-0 z-[1] text-xs px-2 py-1 sm:px-6 sm:py-4 text-center bg-white">{Object.values(datha)}</td>
-                            )
-                          } else {
-                            return(
-                              <td key={index} className="text-xs px-2 py-1 sm:px-6 sm:py-4 text-center">{Object.values(datha)}</td>
-                            )
-                          }
-                        })
-                      }
-                    </tr>
-                  )
-                })
-              }
-            </tbody>
-          </table>
-        </div>
-      </div> */}
 
       <div className="m-1 sm:m-5 flex flex-col h-[30vh]">
         <div className="grow overflow-scroll">
