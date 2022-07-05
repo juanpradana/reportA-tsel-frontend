@@ -1,6 +1,6 @@
-import Sidebar from "../Components/Sidebar"
-import Navbar from "../Components/Navbar"
-import ChartBar from "../Components/ChartBar"
+import Sidebar from "../../Components/User/Sidebar"
+import Navbar from "../../Components/User/Navbar"
+import ChartBar from "../../Components/User/ChartBar"
 
 const Power = () => {
   return (

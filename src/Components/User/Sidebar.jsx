@@ -17,14 +17,14 @@ function Sidebar() {
         } bg-gray-200 h-screen p-5  pt-8 relative duration-300`}
       >
         <img
-          src={require("../assets/control.png")}
+          src={require("../../assets/control.png")}
           className={`absolute cursor-pointer -right-3 top-9 w-7 border-dark-purple
            border-2 rounded-full ${window.screen.width >= 640 ? !open && "rotate-180" : open && "rotate-180"}`}
           onClick={() => setOpen(!open)} alt='control button'
         />
         <div className="flex gap-x-4 items-center">
           <img
-            src={require("../assets/logo3.png")}
+            src={require("../../assets/logo3.png")}
             className={`cursor-pointer duration-500 ${
               open && "rotate-[360deg]"
             }`} alt='logo'
@@ -49,7 +49,7 @@ function Sidebar() {
                   ${index === Menus.map(object => object.dest).indexOf(`${window.location.pathname}`) && "bg-purple-500/50"}`
                 }
               >
-                <img src={require(`../assets/${Menu.src}.png`)} alt='menus'/>
+                <img src={require(`../../assets/${Menu.src}.png`)} alt='menus'/>
                 <span className={`${window.screen.width >= 640 ? !open && "hidden" : open && "hidden"} origin-left duration-200`}>
                   {Menu.title}
                 </span>

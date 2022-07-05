@@ -1,7 +1,7 @@
-import Sidebar from "../Components/Sidebar"
-import Navbar from "../Components/Navbar"
-import Table from "../Components/Table"
-import ChartBar from "../Components/ChartBar"
+import Sidebar from "../../Components/User/Sidebar"
+import Navbar from "../../Components/User/Navbar"
+import Table from "../../Components/User/Table"
+import ChartBar from "../../Components/User/ChartBar"
 
 const Overview = () => {
   return (

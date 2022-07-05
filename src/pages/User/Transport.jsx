@@ -1,5 +1,5 @@
-import Sidebar from "../Components/Sidebar"
-import Navbar from "../Components/Navbar"
+import Sidebar from "../../Components/User/Sidebar"
+import Navbar from "../../Components/User/Navbar"
 
 const Transport = () => {
   return (
