@@ -9,7 +9,7 @@ const Power = () => {
         <Sidebar />
         <div className="w-full">
           <Navbar />
-          <div className='flex m-2'>
+          <div className='flex m-4'>
             <ChartBar />
           </div>
         </div>

@@ -136,7 +136,8 @@ function Table({ columns, data }) {
 
   // Render the UI for your table
   return (
-    <>
+    <div className="p-2 sm:p-4 box-content w-full sm:w-[75vw] bg-white rounded-md border border-gray-500">
+      <h1 className="text-lg pb-2 text-center sm:text-2xl">Data Table</h1>
       {/*
         Row Filter
       */}
@@ -182,54 +183,56 @@ function Table({ columns, data }) {
       {/*
         Table Data
       */}
-      <table {...getTableProps()}>
-        <thead>
-          {headerGroups.map(headerGroup => (
-            <tr {...headerGroup.getHeaderGroupProps()}>
-              {headerGroup.headers.map(column => (
-                <th {...column.getHeaderProps()}>
-                  <div>
-                    <span {...column.getSortByToggleProps()}>
-                      {column.render('Header')}
-                      {/* Add a sort direction indicator */}
-                      {column.isSorted
-                        ? column.isSortedDesc
-                          ? ' ▾'
-                          : ' ▴'
-                        : ''}
-                    </span>
-                  </div>
-                  {/* Render the columns filter UI */}
-                  <div>{column.canFilter ? column.render('Filter') : null}</div>
-                </th>
-              ))}
-            </tr>
-          ))}
-        </thead>
-        <tbody {...getTableBodyProps()}>
-          {page.map(row => {
-            prepareRow(row)
-            return (
-              <tr {...row.getRowProps()}>
-                {row.cells.map(cell => {
-                  return (
-                    <td {...cell.getCellProps()}>
-                      {cell.isAggregated ? (
-                        // If the cell is aggregated, use the Aggregated
-                        // renderer for cell
-                        cell.render('Aggregated')
-                      ) : cell.isPlaceholder ? null : ( // For cells with repeated values, render null
-                        // Otherwise, just render the regular cell
-                        cell.render('Cell', { editable: true })
-                      )}
-                    </td>
-                  )
-                })}
+      <div className="grow overflow-x-scroll">
+        <table {...getTableProps()}>
+          <thead>
+            {headerGroups.map(headerGroup => (
+              <tr className='text-black bg-violet-600/50' {...headerGroup.getHeaderGroupProps()}>
+                {headerGroup.headers.map(column => (
+                  <th {...column.getHeaderProps()}>
+                    <div>
+                      <span {...column.getSortByToggleProps()}>
+                        {column.render('Header')}
+                        {/* Add a sort direction indicator */}
+                        {column.isSorted
+                          ? column.isSortedDesc
+                            ? ' ▾'
+                            : ' ▴'
+                          : ''}
+                      </span>
+                    </div>
+                    {/* Render the columns filter UI */}
+                    <div>{column.canFilter ? column.render('Filter') : null}</div>
+                  </th>
+                ))}
               </tr>
-            )
-          })}
-        </tbody>
-      </table>
+            ))}
+          </thead>
+          <tbody {...getTableBodyProps()}>
+            {page.map(row => {
+              prepareRow(row)
+              return (
+                <tr {...row.getRowProps()}>
+                  {row.cells.map(cell => {
+                    return (
+                      <td {...cell.getCellProps()}>
+                        {cell.isAggregated ? (
+                          // If the cell is aggregated, use the Aggregated
+                          // renderer for cell
+                          cell.render('Aggregated')
+                        ) : cell.isPlaceholder ? null : ( // For cells with repeated values, render null
+                          // Otherwise, just render the regular cell
+                          cell.render('Cell', { editable: true })
+                        )}
+                      </td>
+                    )
+                  })}
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
+      </div>
       {/*
         Pagination can be built however you'd like.
         This is just a very basic UI implementation:
@@ -296,7 +299,7 @@ function Table({ columns, data }) {
           )}
         </code>
       </pre> */}
-    </>
+    </div>
   )
 }
 

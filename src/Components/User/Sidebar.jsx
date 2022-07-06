@@ -14,7 +14,7 @@ function Sidebar() {
       <div
         className={` ${
           window.screen.width >= 640 ? open ? "w-72" : "w-20" : open ? "w-20" : "w-48"
-        } bg-gray-200 h-screen p-5  pt-8 relative duration-300`}
+        } bg-gray-200 h-full p-5  pt-8 relative duration-300`}
       >
         <img
           src={require("../../assets/control.png")}

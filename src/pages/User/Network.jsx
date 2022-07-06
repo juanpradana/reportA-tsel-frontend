@@ -9,7 +9,7 @@ const Network = () => {
         <Sidebar />
         <div className="w-full">
           <Navbar />
-          <div className='m-4'>
+          <div className='p-4'>
             <Table />
           </div>
         </div>

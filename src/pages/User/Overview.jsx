@@ -10,10 +10,10 @@ const Overview = () => {
         <Sidebar />
         <div className="w-full">
           <Navbar />
-          <div className='flex mt-2 ml-4 mb-2 mr-0'>
+          <div className='flex mt-2 ml-4 mb-2'>
             <ChartBar />
           </div>
-          <div className='ml-4 mb-4 mt-0 mr-0'>
+          <div className='flex ml-4 mb-4'>
             <Table />
           </div>
         </div>
