@@ -23,3 +23,8 @@ yarn-debug.log*
 yarn-error.log*
 package-lock.json
 config.js
+data.json
+Table_Backup.jsx
+TableTest.jsx
+TableTest2.jsx
+ChartBarTest.jsx

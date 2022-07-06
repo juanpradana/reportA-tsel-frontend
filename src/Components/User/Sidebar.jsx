@@ -3,7 +3,7 @@ import { useState } from "react";
 function Sidebar() {
   const [open, setOpen] = useState(true);
   const Menus = [
-    { title: "Overview", src: "Pulse", dest: "/" },
+    { title: "Overview", src: "Pulse", dest: "/overview" },
     { title: "Network", src: "Hotspot", dest: "/network" },
     { title: "Power", src: "Lightning-alt", dest: "/power"},
     { title: "Transport ", src: "Globe", dest: "/transport" },
