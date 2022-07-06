@@ -1,6 +1,7 @@
 import Sidebar from "../../Components/User/Sidebar"
 import Navbar from "../../Components/User/Navbar"
 import ChartBar from "../../Components/User/ChartBar"
+import MapsComponents from "../../Components/User/MapsComponents"
 
 const Power = () => {
   return (
@@ -10,12 +11,13 @@ const Power = () => {
         <div className="w-full">
           <Navbar />
           <div className='flex m-4'>
-            <ChartBar />
+            <MapsComponents />
           </div>
         </div>
       </div>
     </>
   )
+  
 }
 
 export default Power

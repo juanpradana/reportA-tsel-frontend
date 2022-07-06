@@ -2,6 +2,7 @@ import Sidebar from "../../Components/User/Sidebar"
 import Navbar from "../../Components/User/Navbar"
 import Table from "../../Components/User/Table"
 import ChartBar from "../../Components/User/ChartBar"
+import MapsComponents from "../../Components/User/MapsComponents"
 
 const Overview = () => {
   return (
@@ -10,8 +11,9 @@ const Overview = () => {
         <Sidebar />
         <div className="w-full">
           <Navbar />
-          <div className='flex mt-2 ml-4 mb-2'>
+          <div className='flex-none sm:flex mt-2 ml-4 mb-2'>
             <ChartBar />
+            <MapsComponents />
           </div>
           <div className='flex ml-4 mb-4'>
             <Table />
